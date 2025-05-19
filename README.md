@@ -11,7 +11,13 @@ A conversational AI assistant that helps users book restaurant reservations or g
 🧠 Powered by llama3-70b-8192 via Groq API
 💻 Deployed through Streamlit with user-friendly chat UI
 📁 Project Structure
-foodiespot-reservation-agent/ ├── app/ │ └── main.py # Streamlit frontend ├── agent/ │ ├── agent.py # Core conversation logic │ ├── intent_handler.py # Routes intent to appropriate tool │ └── prompts.py # System prompt & few-shot examples ├── tools/ │ ├── reservation_tools.py # Makes reservations from params │ ├── recommendation_tools.py # Suggests restaurant options │ └── utils.py # Helper functions ├── data/ │ └── restaurants.py # Static dataset of 40 restaurants ├── .env.example # Template for environment config ├── requirements.txt # Project dependencies └── README.md
+foodiespot-reservation-agent/ 
+├── app/ 
+│ └── main.py # Streamlit frontend 
+├── agent/ 
+│ ├── agent.py # Core conversation logic 
+│ ├── intent_handler.py # Routes intent to appropriate tool 
+│ └── prompts.py # System prompt & few-shot examples ├── tools/ │ ├── reservation_tools.py # Makes reservations from params │ ├── recommendation_tools.py # Suggests restaurant options │ └── utils.py # Helper functions ├── data/ │ └── restaurants.py # Static dataset of 40 restaurants ├── .env.example # Template for environment config ├── requirements.txt # Project dependencies └── README.md
 
 Create and activate a virtual environment
 
