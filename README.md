@@ -1,70 +1,67 @@
-🧠 FoodieSpot AI Reservation Agent
-FoodieSpot_Reservation_Agent is a conversational AI assistant that helps users book restaurant reservations or get dining recommendations — just like a human receptionist. Built using Groq + LLaMA 3, it uses a lightweight, custom tool-calling framework (no LangChain) and a sleek Streamlit frontend for chat-style interaction.
+# 🧠 FoodieSpot AI Reservation Agent
 
-🚀 Features
-🗣️ Multi-turn conversation with context memory
+A conversational AI assistant that helps users book restaurant reservations or get dining recommendations — just like a human receptionist. Built using **Groq + LLaMA 3**, with a custom lightweight tool-calling framework (no LangChain), and a clean **Streamlit** frontend for chat-style interaction.
 
-🍽️ Understands cuisine or specific restaurant names
+---
 
-📍 Extracts location, party size, and reservation time
+## 🚀 Features
 
-🤖 Automatically follows up for missing details
+- 🗣️ Multi-turn conversation with memory
+- 🍽️ Understands cuisine or restaurant name
+- 📍 Detects location, party size, and reservation time
+- 🤖 Follows up for missing information automatically
+- 🔧 Dynamic tool-calling without LangChain
+- 🧠 Powered by `llama3-70b-8192` via Groq API
+- 💻 Deployed through Streamlit with user-friendly chat UI
 
-🔧 Custom tool-calling implementation (no LangChain)
+---
 
-🧠 Powered by llama3-70b-8192 via Groq API
+## 📁 Project Structure
 
-💻 Deployed with a user-friendly Streamlit chatbot UI
-
-📁 Project Structure
 foodiespot-reservation-agent/
 ├── app/
-│ └── main.py → Streamlit frontend
+│   └── main.py                  # Streamlit frontend
 ├── agent/
-│ ├── agent.py → Core conversation logic
-│ ├── intent_handler.py → Routes intent to appropriate tool
-│ └── prompts.py → System prompt & few-shot examples
+│   ├── agent.py                 # Conversation flow and state
+│   ├── intent_handler.py        # Routes parsed intent to tools
+│   └── prompts.py               # Prompt + few-shot examples
 ├── tools/
-│ ├── reservation_tools.py → Handles reservation logic
-│ ├── recommendation_tools.py → Suggests restaurant options
-│ └── utils.py → Helper functions
+│   ├── reservation_tools.py     # Reservation logic
+│   ├── recommendation_tools.py  # Recommendation logic
+│   └── utils.py                 # Utility functions
 ├── data/
-│ └── restaurants.py → Static dataset of 40 restaurants
-├── .env.example → Template for environment config
-├── requirements.txt → Project dependencies
+│   └── restaurants.py           # Static list of restaurants
+├── .env.example                 # API key template
+├── requirements.txt             # Dependencies
 └── README.md
 
-⚙️ Setup Instructions
-Create and activate a virtual environment:
 
-On Windows:
+
+## Create and activate a virtual environment
+
 python -m venv venv
+## Windows:
 venv\Scripts\activate
-
-On Mac/Linux:
-python3 -m venv venv
+## Mac/Linux:
 source venv/bin/activate
 
-Install dependencies:
+## Install dependencies
+
 pip install -r requirements.txt
 
-Add your Groq API key:
-Copy .env.example to .env
-Add GROQ_API_KEY=your_groq_api_key_here
-
-▶️ Run the App
+## Run this project
 streamlit run app/main.py
 
-Then open the URL shown (usually http://localhost:8501) in your browser.
 
-💬 Example Conversation
+## Example Conversation
+
 👤: I want to book a restaurant
 🤖: Is there a specific restaurant you'd like to book?
 👤: South Indian
 🤖: Which area or location do you prefer?
 👤: Andheri
 🤖: Is there a specific restaurant name?
-👤: SamBar Pub
+👤: SamBar Pub 
 🤖: For how many people should I book the table?
 👤: 2
 🤖: What time would you like the reservation?
