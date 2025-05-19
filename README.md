@@ -49,6 +49,9 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
+## changes in .env file
+Grok_API = "XXXXXXXXXXXX"     write your own API
+
 ## Run this project
 streamlit run app/main.py
 
