@@ -20,20 +20,21 @@ A conversational AI assistant that helps users book restaurant reservations or g
 
 foodiespot-reservation-agent/
 ├── app/
-│ └── main.py # Streamlit frontend
+│   └── main.py                  # Streamlit frontend
 ├── agent/
-│ ├── agent.py # Core conversation logic
-│ ├── intent_handler.py # Routes intent to appropriate tool
-│ └── prompts.py # System prompt & few-shot examples
+│   ├── agent.py                 # Conversation flow and state
+│   ├── intent_handler.py        # Routes parsed intent to tools
+│   └── prompts.py               # Prompt + few-shot examples
 ├── tools/
-│ ├── reservation_tools.py # Makes reservations from params
-│ ├── recommendation_tools.py # Suggests restaurant options
-│ └── utils.py # Helper functions
+│   ├── reservation_tools.py     # Reservation logic
+│   ├── recommendation_tools.py  # Recommendation logic
+│   └── utils.py                 # Utility functions
 ├── data/
-│ └── restaurants.py # Static dataset of 40 restaurants
-├── .env.example # Template for environment config
-├── requirements.txt # Project dependencies
-└── README.md 
+│   └── restaurants.py           # Static list of restaurants
+├── .env.example                 # API key template
+├── requirements.txt             # Dependencies
+└── README.md
+
 
 
 Create and activate a virtual environment
