@@ -37,7 +37,7 @@ foodiespot-reservation-agent/
 
 
 
-Create and activate a virtual environment
+##Create and activate a virtual environment
 
 python -m venv venv
 # Windows:
@@ -45,15 +45,15 @@ venv\Scripts\activate
 # Mac/Linux:
 source venv/bin/activate
 
-Install dependencies
+##Install dependencies
 
 pip install -r requirements.txt
 
-Run this project
+##Run this project
 streamlit run app/main.py
 
 
-Example Conversation
+##Example Conversation
 
 👤: I want to book a restaurant
 🤖: Is there a specific restaurant you'd like to book?
