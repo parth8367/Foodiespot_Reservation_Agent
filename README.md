@@ -16,9 +16,8 @@ A conversational AI assistant that helps users book restaurant reservations or g
 
 ---
 
-## 📁 Project Structure
-
-foodiespot-reservation-agent/
+```
+foodiespot-reservation-agent
 ├── app/
 │   └── main.py                  # Streamlit frontend
 ├── agent/
@@ -33,8 +32,8 @@ foodiespot-reservation-agent/
 │   └── restaurants.py           # Static list of restaurants
 ├── .env.example                 # API key template
 ├── requirements.txt             # Dependencies
-└── README.md
-
+└── README.md                    # Project documentation
+```
 
 
 ## Create and activate a virtual environment
@@ -59,14 +58,25 @@ streamlit run app/main.py
 ## Example Conversation
 
 👤: I want to book a restaurant
+
 🤖: Is there a specific restaurant you'd like to book?
+
 👤: South Indian
+
 🤖: Which area or location do you prefer?
+
 👤: Andheri
+
 🤖: Is there a specific restaurant name?
+
 👤: SamBar Pub 
+
 🤖: For how many people should I book the table?
+
 👤: 2
+
 🤖: What time would you like the reservation?
+
 👤: 8 PM
+
 ✅ Reservation confirmed for 2 people at SamBar Pub (South Indian) in Andheri at 8 PM!
